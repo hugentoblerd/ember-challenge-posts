@@ -27,8 +27,6 @@ export default DS.JSONAPISerializer.extend({
 		})
 		delete json.posts
 
-		console.log(json);
-
     return json;
 	}
 });
