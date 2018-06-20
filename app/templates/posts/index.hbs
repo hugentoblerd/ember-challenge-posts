@@ -1,0 +1,26 @@
+<div class="jumbo">
+	<h2>List of Posts</h2>
+</div>
+
+<div class="actions-bar">
+		{{#link-to "posts.create" class="button right"}}Create New Post{{/link-to}}
+</div>
+
+<div class="listings">
+	{{#each model as |post|}}
+		<article class="listing" data-id={{post.id}}>
+			<h3 value={{post.title}}>{{post.title}}</h3>
+			<small>Created Date: {{post.created_at}}</small>
+			<p>{{post.content}}</p>
+			{{#if post.attachment}}
+				<p><a class="button" href="#" onclick={{action "openFile" post.attachment}}>Click here to see attached file</a></p>
+			{{/if}}
+			<div class="interact-buttons">
+				<button type="button" class="edit-post" {{action 'editPost' post}}>Edit</button>
+				<button type="button" class="delete-post" {{action 'deletePost' post}}>Delete</button>
+			</div>
+		</article>
+	{{/each}}
+</div>
+
+{{outlet}}
