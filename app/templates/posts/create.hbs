@@ -8,7 +8,6 @@
 		<p>{{textarea value=newContent placeholder="Post Content" required=true cols="80" rows="6"}}</p>
 		<p>
 			<label for="file">Choose file to upload(less than 50kb)</label>
-			{{!-- {{input id="file" name="file" type="file" onchange="uploadFile" value=newAttachment}} --}}
 			<input id="file" name="file" type="file" onchange={{action "uploadFile"}} value={{newAttachment}} />
 		</p>
 	</div>
