@@ -1,13 +1,20 @@
-<div>
+<div class="jumbo">
 	<h2>List of Posts</h2>
 </div>
 
+<div class="actions-bar">
+	{{#link-to "create" class="button right"}}Create New Post{{/link-to}}
+</div>
+
 {{#each model as |post|}}
-	<article class="post">
+	<article class="listing">
 		<h3>{{post.title}}</h3>
 		<p>{{post.content}}</p>
 		<p>{{post.attachment}}</p>
 	</article>
+	<div class="">
+		
+	</div>
 {{/each}}
 
 {{outlet}}
