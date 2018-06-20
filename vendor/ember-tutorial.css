@@ -262,10 +262,11 @@ p {
 }
 
 .listing small {
-    float: left;
+    /*float: left;*/
     display: block;
-    text-align: center;
-    width: 136px;
+    font-size: 10px;
+    /*text-align: center;*/
+    /*width: 136px;*/
 }
 
 .listing h3 {
