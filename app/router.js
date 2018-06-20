@@ -7,8 +7,10 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('posts');
-  this.route('create');
+  this.route('posts', function() {
+    this.route('create');
+    this.route('edit', { path: '/edit/:post_id' });
+  });
 });
 
 export default Router;
