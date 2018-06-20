@@ -29,13 +29,11 @@ export default Controller.extend({
 				if (size > 50000) {
 					newAttachment = null;
 					this.set('newAttachment', null);
-					alert('File size greater than 50kb aren\'t allowed');
+					return alert('File size greater than 50kb aren\'t allowed');
 				} else {
 					newAttachment = fileUri;
 				}
 			}
-
-			console.log(newAttachment);
 
 			let newRecord = this.get('store').createRecord('posts', {
 				key: "david.hugentobler",
